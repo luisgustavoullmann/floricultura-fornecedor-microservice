@@ -23,5 +23,4 @@ public class InfoFornecedor {
     private String nome;
     private String estado;
     private String endereco;
-
 }
