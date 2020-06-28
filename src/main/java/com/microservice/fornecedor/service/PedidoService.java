@@ -31,7 +31,7 @@ public class PedidoService {
 
         List<PedidoItem> pedidoItens = toPedidoItem(itens);
         Pedido pedido = new Pedido(pedidoItens);
-        pedido.setTempoPreparo((itens.size()));
+        pedido.setTempoDePreparo((itens.size()));
         return pedidoRepository.save(pedido);
     }
 

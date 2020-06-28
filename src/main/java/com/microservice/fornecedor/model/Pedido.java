@@ -19,7 +19,7 @@ public class Pedido {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Integer tempoPreparo;
+    private Integer tempoDePreparo;
 
     @Enumerated(EnumType.STRING)
     private PedidoStatus status;
