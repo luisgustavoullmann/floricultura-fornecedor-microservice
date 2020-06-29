@@ -14,19 +14,19 @@ import java.util.List;
  */
 @Slf4j
 @RestController
-@RequestMapping("pedido")
+@RequestMapping("/pedido")
 public class PedidoController {
 
     @Autowired
     private PedidoService pedidoService;
 
     @GetMapping("/{id}")
-    public Pedido getPedidoPorId(@PathVariable("id") Long id){
+    public Pedido getPedidoPorId(@PathVariable("id") Long id) {
         return pedidoService.getPedidoPorId(id);
     }
 
     @PostMapping
-    public Pedido realizaPedido(@RequestBody List<ItemPedidoDto> produtos){
+    public Pedido realizaPedido(@RequestBody List<ItemPedidoDto> produtos) {
         log.info("Fornecedor já está com o pedido");
         return pedidoService.realizaPedido(produtos);
     }

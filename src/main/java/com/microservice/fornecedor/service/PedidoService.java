@@ -24,8 +24,8 @@ public class PedidoService {
     @Autowired
     private ProdutoRepository produtoRepository;
 
-    public Pedido realizaPedido(List<ItemPedidoDto> itens){
-        if(itens == null){
+    public Pedido realizaPedido(List<ItemPedidoDto> itens) {
+        if (itens == null) {
             return null;
         }
 
@@ -35,7 +35,7 @@ public class PedidoService {
         return pedidoRepository.save(pedido);
     }
 
-    public Pedido getPedidoPorId(Long id){
+    public Pedido getPedidoPorId(Long id) {
         return this.pedidoRepository.findById(id).orElse(new Pedido());
     }
 

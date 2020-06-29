@@ -21,7 +21,7 @@ public class ProdutoController {
     private ProdutoService produtoService;
 
     @GetMapping("/{estado}")
-    public List<Produto> getProdutoPorEstado(@PathVariable("estado") String estado){
+    public List<Produto> getProdutoPorEstado(@PathVariable("estado") String estado) {
         return produtoService.getProdutosPorEstado(estado);
     }
 }
